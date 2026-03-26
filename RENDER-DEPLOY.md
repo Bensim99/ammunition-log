@@ -39,7 +39,7 @@
    - **Name**: ammunition-log
    - **Region**: Choose your region
    - **Runtime**: Node
-   - **Build Command**: `npm install && npm run build`
+   - **Build Command**: `npm install --prefix client && npm install --prefix server && npm run build`
    - **Start Command**: `npm start`
    - **Environment**: 
      - Add `NODE_ENV=production`
