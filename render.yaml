@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ammunition-log
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        scope: build
+        value: production
+      - key: NODE_ENV
+        scope: runtime
+        value: production
+      - key: MONGODB_URI
+        scope: runtime
+        sync: false

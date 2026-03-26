@@ -1,0 +1,24 @@
+{
+  "name": "ammunition-log",
+  "version": "2.4.0",
+  "description": "Battalion Ammunition Management System",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client && npm run build --prefix server",
+    "start": "node server/server.js",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "recharts": "^2.10.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
